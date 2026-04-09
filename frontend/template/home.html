@@ -17,6 +17,8 @@
       width: 100%;
       height: 360px;
       object-fit: cover;
+      margin-top: 16px;
+      margin-bottom: 16px;
     }
     h2{
       font-family: Arial, Helvetica, sans-serif;
@@ -43,11 +45,19 @@
 </head>
 <body>
   {% include 'navbar.html' %}
+  <img  class="img-fluid" id="banner" src="../static/career.png" alt="Career image" >
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Career website</h1>
-    <img  class="img-fluid" id="banner" src="../static/career.png" alt="Career image" >
-    <h2 class="text-center mt-2 mb-4">About us</h2>
-    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus doloremque perspiciatis necessitatibus voluptatem veritatis voluptate itaque, deserunt suscipit iste maiores, quas corporis corrupti temporibus. Earum praesentium commodi quisquam mollitia perspiciatis.</p>
+    <div class="row" style="margin-bottom: 16px;">
+      <div class="col-6">
+    <p class="lead">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus doloremque perspiciatis necessitatibus voluptatem veritatis voluptate itaque, deserunt suscipit iste maiores, quas corporis corrupti temporibus. Earum praesentium commodi quisquam mollitia perspiciatis.
+    </p>
+    </div>
+    <div class=" d-none d-md-block col-6">
+    <img src="../static/logo1.png " height="320px">
+    </div>
+    </div>
     <h2>Open position</h2>
       <div >
           <p>
@@ -58,10 +68,14 @@
           </p>
       </div>
     <div id="button" style="text-align: center;">
-  <button type="button" class="btn btn-primary btn-lg">Conatct us</button>
-  <p class="mt-4">Copyright 2022,career</p>
+  <a href="mailto:career123@gmail.com?subject=Question%20about%20jobs&body=My%20Name%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Question%3A%20%3CQuestions%3E" type="button" class="btn btn-primary btn-lg">Conatct us</a>
+  
   </div>
+  
   </div>
+  
+  {% include 'footer.html' %}
+  
    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
